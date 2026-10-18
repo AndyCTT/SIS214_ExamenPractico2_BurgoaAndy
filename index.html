@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="es" data-tema="oscuro">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CV interactivo de Andy Jorge Burgoa Callejas, estudiante de Ingeniería de Sistemas en la UCB San Pablo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Andy Burgoa — Hoja de Vida</title>
+</head>
+
+<body>
+
+  <!-- enlace para saltar al contenido (accesibilidad) -->
+  <a href="#contenido_principal" class="enlace_salto">Saltar al contenido principal</a>
+
+  <!-- cabesera con foto, nombre y botones -->
+  <header class="cabecera animar_cabecera">
+    <section class="contenedor cabecera_grid" aria-label="Presentación personal">
+
+      <figure class="foto_marco">
+        <img width="190" height="190" id="foto_perfil" src="assets/images/mi_foto.jpg" alt="Foto de Andy Burgoa" class="foto_perfil">
+        <span id="foto_iniciales" class="foto_iniciales" hidden>AB</span>
+      </figure>
+
+      <section class="cabecera_texto" aria-label="Información personal">
+        <p class="cabecera_saludo">Hola, soy</p>
+        <h1 class="cabecera_nombre">Andy Jorge Burgoa Callejas</h1>
+        <p class="cabecera_rol">Estudiante de Ingeniería de Sistemas · UCB San Pablo</p>
+
+        <blockquote class="cabecera_cita">
+          <p>«Si algo puede pasar, va a pasar.»</p>
+          <cite>Ley de Murphy</cite>
+        </blockquote>
+
+        <address class="cabecera_contacto">
+          <span>La Paz, Bolivia</span>
+          <a href="mailto:andy.burgoa@ucb.edu.bo">andy.burgoa@ucb.edu.bo</a>
+          <a href="tel:+59169750437">+591 69750437</a>
+        </address>
+
+        <p class="cabecera_acciones">
+          <a href="assets/documents/mi_cv_pdf.pdf" class="boton boton_primario" download>Descargar CV en PDF</a>
+          <button id="boton_tema" class="boton boton_secundario" type="button" aria-pressed="false">
+            <span id="icono_tema" aria-hidden="true">🌙</span>
+            <span id="texto_tema">Modo claro</span>
+          </button>
+        </p>
+      </section>
+
+    </section>
+  </header>
+
+  <!-- menu de navegacion, en celular se abre con el boton -->
+  <nav class="navegacion" aria-label="Navegación principal">
+    <section class="contenedor navegacion_barra" aria-label="Enlaces de navegación">
+      <button id="boton_menu" class="boton boton_secundario boton_menu" type="button" aria-label="Abrir menú de navegación" aria-controls="enlaces_navegacion" aria-expanded="false">☰ Menú de navegación</button>
+      <ul id="enlaces_navegacion" class="navegacion_lista">
+        <li><a href="#perfil">Perfil</a></li>
+        <li><a href="#formacion_habilidades">Formación y habilidades</a></li>
+        <li><a href="#experiencia_proyectos">Experiencia y proyectos</a></li>
+        <li><a href="#historial_academico">Historial académico</a></li>
+        <li><a href="#idiomas">Idiomas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </section>
+  </nav>
+
+  <!-- contenido pricipal de la pagina -->
+  <main id="contenido_principal" class="contenedor contenido_principal">
+
+    <!-- seccion del perfil -->
+    <section id="perfil" class="seccion">
+      
+      <h2 class="seccion_titulo">Perfil profesional</h2>
+      <article class="tarjeta tarjeta_perfil animar_aparicion">
+        <p>
+          Soy <strong>Andy Burgoa</strong>, estudiante de cuarto semestre de Ingeniería de
+          Sistemas en la Universidad Católica Boliviana "San Pablo". Nací el
+          <time datetime="2006-05-11">11 de mayo de 2006</time> y tengo 20 años.
+          Empecé la universidad en Contaduría Pública, pero descubrí que lo mío era
+          resolver problemas con código, así que cambié de carrera y no he mirado atrás
+        </p>
+        <p>
+          Me caracterizo por anticipar errores antes de que ocurran, revisando cada
+          solución más de una vez antes de darla por terminada. Tengo fortalezas en
+          programación orientada a objetos, estructuras de datos y bases de datos, y
+          disfruto aprender herramientas nuevas por cuenta propia
+        </p>
+        <ul class="lista_chips">
+          <li>Resolución analítica de problemas</li>
+          <li>Trabajo en equipo</li>
+          <li>Aprendizaje autodidacta</li>
+        </ul>
+        <details class="detalles">
+          <summary>Objetivo profesional</summary>
+          <p>
+            Me interesa especializarme en desarrollo backend y ciencia de datos,
+            combinando estructuras de datos eficientes con bases de datos relacionales.
+            A futuro quiero profundizar en arquitectura de software y en el uso de
+            inteligencia artificial aplicada a sistemas de información
+          </p>
+        </details>
+      </article>
+    </section>
+    <!-- un poco sobre mi y la musica que me gusta -->
+    <section id="sobre_mi" class="seccion">
+        <h2 class="seccion_titulo">Un poco sobre mí</h2>
+
+        <article class="tarjeta">
+            <h3>Mi música favorita</h3>
+
+            <p>
+                Me gusta escuchar música mientras programo
+                o cuando estoy descansando
+            </p>
+
+                      <!-- video de mi musica favorita -->
+            <figure class="video_musica">
+                <iframe
+                    src="https://www.youtube.com/embed/wDjeBNv6ip0"
+                    title="Una de mis canciones favoritas"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+
+                <figcaption>
+                    Una de mis canciones favoritas
+                </figcaption>
+            </figure>
+        </article>
+    </section>
+
+    <!-- estudios y abilidades -->
+    <section id="formacion_habilidades" class="seccion">
+      <h2 class="seccion_titulo">Formación y habilidades</h2>
+
+      <section class="rejilla_tarjetas" aria-label="Tarjetas informativas">
+        <article class="tarjeta animar_aparicion">
+          <header class="tarjeta_cabecera">
+            <h3>Ingeniería de Sistemas</h3>
+            <span class="etiqueta">En curso</span>
+          </header>
+          <p class="tarjeta_subtitulo">Universidad Católica Boliviana "San Pablo"</p>
+          <p><time datetime="2024">2024</time> — actualidad</p>
+          <p class="avance">
+            <progress value="4" max="9">4 de 9 semestres</progress>
+            <span>4 / 9 semestres</span>
+          </p>
+        </article>
+
+        <article class="tarjeta animar_aparicion">
+          <header class="tarjeta_cabecera">
+            <h3>Contaduría Pública</h3>
+            <span class="etiqueta etiqueta_neutra">Primer año</span>
+          </header>
+          <p class="tarjeta_subtitulo">Universidad Mayor de San Andrés (UMSA)</p>
+          <p><time datetime="2023">2023</time></p>
+          <p>
+            Cursé el primer año antes de cambiarme a Ingeniería de Sistemas; me quedó
+            una base útil de números y organización que aplico en mis proyectos actuales
+          </p>
+        </article>
+      </section>
+
+      <article class="tarjeta animar_aparicion">
+        <h3 class="subtitulo">Lenguajes y tecnologías</h3>
+        <ul class="lista_habilidades">
+          <li>
+            <p class="habilidad_encabezado"><span>Java</span><span>75%</span></p>
+            <meter min="0" max="100" value="75" title="Nivel de dominio en Java">75%</meter>
+          </li>
+          <li>
+            <p class="habilidad_encabezado"><span>Python</span><span>70%</span></p>
+            <meter min="0" max="100" value="70" title="Nivel de dominio en Python">70%</meter>
+          </li>
+          <li>
+            <p class="habilidad_encabezado"><span>C++</span><span>60%</span></p>
+            <meter min="0" max="100" value="60" title="Nivel de dominio en C++">60%</meter>
+          </li>
+          <li>
+            <p class="habilidad_encabezado"><span>HTML5 &amp; CSS3</span><span>80%</span></p>
+            <meter min="0" max="100" value="80" title="Nivel de dominio en HTML5 y CSS3">80%</meter>
+          </li>
+          <li>
+            <p class="habilidad_encabezado"><span>SQL (MariaDB)</span><span>65%</span></p>
+            <meter min="0" max="100" value="65" title="Nivel de dominio en SQL">65%</meter>
+          </li>
+        </ul>
+      </article>
+
+      <section class="rejilla_tarjetas" aria-label="Tarjetas informativas">
+        <article class="tarjeta animar_aparicion">
+          <h3 class="subtitulo">Herramientas</h3>
+          <ul class="lista_simple">
+            <li>Eclipse &amp; JavaFX</li>
+            <li>Dev-C++</li>
+            <li>Git y GitHub</li>
+            <li>Visual Studio Code</li>
+          </ul>
+        </article>
+        <article class="tarjeta animar_aparicion">
+          <h3 class="subtitulo">Habilidades blandas</h3>
+          <ul class="lista_simple">
+            <li>Trabajo en equipo</li>
+            <li>Comunicación</li>
+            <li>Resolución de problemas</li>
+          </ul>
+        </article>
+      </section>
+    </section>
+
+    <!-- experiencia y proyestos, aqui esta el buscador -->
+    <section id="experiencia_proyectos" class="seccion">
+      <h2 class="seccion_titulo">Experiencia y proyectos</h2>
+      <label for="buscar_proyectos" class="etiqueta_busqueda">Buscar proyectos o experiencia</label>
+      <input id="buscar_proyectos" autocomplete="off" type="search" placeholder="Ej. Python, Java, Programación..." aria-controls="lista_proyectos">
+      <p id="resultado_busqueda" role="status" aria-live="polite">3 resultado(s) encontrado(s)</p>
+      <section id="lista_proyectos" class="rejilla_tarjetas" aria-label="Proyectos y experiencia">
+
+        <article class="tarjeta animar_aparicion">
+          <header class="tarjeta_cabecera">
+            <h3>Ayudante de cátedra — Programación 1</h3>
+          </header>
+          <p class="tarjeta_subtitulo">Universidad Católica Boliviana · <time datetime="2026-01">Ciclo 1/2026</time></p>
+          <p>
+            Apoyo a estudiantes de segundo semestre en el lenguaje C++: resolución de
+            dudas, revisión de ejercicios y preparación de material de práctica
+          </p>
+          <p class="logro">Logro: mejora del desempeño de los estudiantes asistidos en las evaluaciones prácticas</p>
+          <figure class="proyecto_imagen_marco">
+            <img class="proyecto_imagen" src="assets/images/cpp.jpg" alt="Imagen ilustrativa de programación en C++" loading="lazy">
+          </figure>
+        </article>
+
+        <article class="tarjeta tarjeta_proyecto animar_aparicion">
+          <h3>Sistema de navegación en Python</h3>
+          <p>Sistema que calcula y gestiona rutas de navegación utilizando estructuras de datos</p>
+          <p class="tarjeta_meta">Tecnologías: Python · Rol: Desarrollador</p>
+          <a class="enlace_proyecto" href="https://github.com/AndyCTT/Proyects-UCB/blob/5f0ecba44c766755ff9362b716622326d87ab36c/SIstema_navegacion.py" target="_blank" rel="noopener">Ver código en GitHub</a>
+          <figure class="proyecto_imagen_marco">
+            <img class="proyecto_imagen" src="assets/images/Kivy.jpg" alt="Captura de pantalla del sistema de navegación en Python" loading="lazy">
+          </figure>
+        </article>
+
+        <article class="tarjeta tarjeta_proyecto animar_aparicion">
+          <h3>Sistema bancario en Java</h3>
+          <p>Aplicación de escritorio con manejo de cuentas, excepciones personalizadas, persistencia en archivos e interfaz gráfica JavaFX</p>
+          <p class="tarjeta_meta">Tecnologías: Java, JavaFX · Rol: Desarrollador</p>
+          <a class="enlace_proyecto" href="https://github.com/AndyCTT/Proyects-UCB/tree/bf7562737ab66d4b7d6c07881f926e2ca2fb8f12/Proyecto_Sistema_Bancario" target="_blank" rel="noopener">Ver código en GitHub</a>
+          <figure class="proyecto_imagen_marco">
+            <img class="proyecto_imagen" src="assets/images/sist_banco.jpg" alt="Captura de pantalla del sistema bancario en Java" loading="lazy">
+          </figure>
+        </article>
+
+      </section>
+      <!-- repositorios que vienen de la api de github -->
+      <aside class="tarjeta tarjeta_github" aria-labelledby="titulo_github">
+        <h3 id="titulo_github">Repositorios públicos de GitHub</h3>
+        <details class="github_desplegable">
+          <summary>Ver repositorios de GitHub</summary>
+          <p id="estado_github" role="status" aria-live="polite">Cargando repositorios…</p>
+          <ul id="repositorios_github" class="lista_simple"></ul>
+          <button id="recargar_github" type="button" class="boton boton_secundario">Actualizar repositorios</button>
+        </details>
+      </aside>
+    </section>
+
+    <!-- notas por semestre -->
+    <section id="historial_academico" class="seccion">
+      <h2 class="seccion_titulo">Historial académico</h2>
+
+      <section class="rejilla_tarjetas rejilla_kpi" aria-label="Resumen académico">
+        <article class="tarjeta tarjeta_kpi animar_aparicion">
+          <span class="kpi_numero">80,18</span>
+          <span class="kpi_etiqueta">Nota promedio</span>
+        </article>
+        <article class="tarjeta tarjeta_kpi animar_aparicion">
+          <span class="kpi_numero">17</span>
+          <span class="kpi_etiqueta">Asignaturas aprobadas</span>
+        </article>
+        <article class="tarjeta tarjeta_kpi animar_aparicion">
+          <span class="kpi_numero">100</span>
+          <span class="kpi_etiqueta">Nota máxima</span>
+        </article>
+        <article class="tarjeta tarjeta_kpi animar_aparicion">
+          <span class="kpi_numero">63</span>
+          <span class="kpi_etiqueta">Nota mínima</span>
+        </article>
+      </section>
+
+      <article class="tarjeta tarjeta_tabla animar_aparicion">
+        <details class="detalles" open>
+          <summary>1-2025 · Promedio 87</summary>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Sigla</th>
+                <th scope="col">Asignatura</th>
+                <th scope="col">Nota final</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>FIL-107</td><td>Pensamiento Crítico</td><td>94</td></tr>
+              <tr><td>MAT-122</td><td>Matemáticas Discretas</td><td>78</td></tr>
+              <tr><td>MAT-123</td><td>Álgebra Lineal</td><td>63</td></tr>
+              <tr><td>PCI-100</td><td>Prueba de Colocación de Inglés</td><td>43</td></tr>
+              <tr><td>SIS-111</td><td>Introducción a la Programación</td><td>100</td></tr>
+              <tr><td>SIS-123</td><td>Ingeniería de Sistemas</td><td>100</td></tr>
+            </tbody>
+          </table>
+        </details>
+
+        <details class="detalles">
+          <summary>2-2025 · Promedio 74,80</summary>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Sigla</th>
+                <th scope="col">Asignatura</th>
+                <th scope="col">Nota final</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>FHC-102</td><td>Antropología Cristiana</td><td>74</td></tr>
+              <tr><td>IDM-201</td><td>Idioma Inglés Nivel 1</td><td>74</td></tr>
+              <tr><td>MAT-132</td><td>Cálculo I</td><td>76</td></tr>
+              <tr><td>MAT-142</td><td>Probabilidad y Estadística I</td><td>71</td></tr>
+              <tr><td>MAT-251</td><td>Investigación Operativa I</td><td>67</td></tr>
+              <tr><td>SIS-112</td><td>Programación I</td><td>AHP</td></tr>
+              <tr><td>SIS-133</td><td>Arquitectura Computacional y Sistemas Operativos</td><td>86</td></tr>
+            </tbody>
+          </table>
+        </details>
+
+        <details class="detalles">
+          <summary>V-2026 · Promedio 100</summary>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Sigla</th>
+                <th scope="col">Asignatura</th>
+                <th scope="col">Nota final</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>SIS-112</td><td>Programación I</td><td>100</td></tr>
+            </tbody>
+          </table>
+        </details>
+
+        <details class="detalles">
+          <summary>1-2026 · Promedio 75,67</summary>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Sigla</th>
+                <th scope="col">Asignatura</th>
+                <th scope="col">Nota final</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>FIS-111</td><td>Física I y Laboratorio</td><td>64</td></tr>
+              <tr><td>IDM-202</td><td>Idioma Inglés Nivel 2</td><td>AHP</td></tr>
+              <tr><td>IND-260</td><td>Metodología de la Investigación</td><td>79</td></tr>
+              <tr><td>MAT-133</td><td>Cálculo II</td><td>79</td></tr>
+              <tr><td>MAT-143</td><td>Probabilidad y Estadística II</td><td>76</td></tr>
+              <tr><td>SIS-113</td><td>Programación II</td><td>74</td></tr>
+              <tr><td>SIS-122</td><td>Base de Datos I</td><td>92</td></tr>
+            </tbody>
+          </table>
+        </details>
+
+        <details class="detalles">
+          <summary>2-2026 · En curso</summary>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Sigla</th>
+                <th scope="col">Asignatura</th>
+                <th scope="col">Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>FHC-202</td><td>Cristología</td><td>En curso</td></tr>
+              <tr><td>FIL-207</td><td>Epistemología</td><td>En curso</td></tr>
+              <tr><td>MAT-252</td><td>Investigación Operativa II y Laboratorio</td><td>En curso</td></tr>
+              <tr><td>SIS-211</td><td>Estructuras de Datos</td><td>En curso</td></tr>
+              <tr><td>SIS-214</td><td>Tecnologías Web I</td><td>En curso</td></tr>
+              <tr><td>SIS-221</td><td>Base de Datos II</td><td>En curso</td></tr>
+              <tr><td>SIS-225</td><td>Sistemas de Información</td><td>En curso</td></tr>
+            </tbody>
+          </table>
+        </details>
+      </article>
+    </section>
+
+    <!-- tabla de idiomas -->
+    <section id="idiomas" class="seccion">
+      <h2 class="seccion_titulo">Idiomas</h2>
+      <article class="tarjeta tarjeta_tabla animar_aparicion">
+        <table>
+          <caption>Nivel de idiomas</caption>
+          <thead>
+            <tr>
+              <th scope="col">Idioma</th>
+              <th scope="col">Lectura</th>
+              <th scope="col">Escritura</th>
+              <th scope="col">Conversación</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Español</td>
+              <td>Avanzado</td>
+              <td>Avanzado</td>
+              <td>Nativo</td>
+            </tr>
+            <tr>
+              <td>Inglés</td>
+              <td>Básico</td>
+              <td>Básico</td>
+              <td>Básico</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </section>
+
+    <!-- formulario de contacto -->
+    <section id="contacto" class="seccion">
+      <h2 class="seccion_titulo">Contacto</h2>
+      <article class="tarjeta animar_aparicion">
+        <form id="formulario_contacto" novalidate>
+          <fieldset>
+            <legend>Formulario de contacto</legend>
+
+            <p class="campo">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" minlength="3" required>
+              <small class="campo_error" id="error_nombre" role="alert"></small>
+            </p>
+
+            <p class="campo">
+              <label for="correo">Correo electrónico</label>
+              <input type="email" id="correo" name="correo" placeholder="tu.correo@ejemplo.com" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" required>
+              <small class="campo_error" id="error_correo" role="alert"></small>
+            </p>
+
+            <p class="campo">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" pattern="\+?[0-9 ]{7,15}" placeholder="+591 69750437" required>
+              <small class="campo_error" id="error_telefono" role="alert"></small>
+            </p>
+
+            <p class="campo">
+              <label for="motivo">Motivo de contacto</label>
+              <select id="motivo" name="motivo" required>
+                <option value="">Selecciona una opción</option>
+                <option value="consulta">Consulta general</option>
+                <option value="oferta">Oferta laboral</option>
+                <option value="colaboracion">Colaboración en proyecto</option>
+                <option value="otro">Otro</option>
+              </select>
+              <small class="campo_error" id="error_motivo" role="alert"></small>
+            </p>
+
+            <p class="campo">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="5" minlength="10" required></textarea>
+              <small class="campo_error" id="error_mensaje" role="alert"></small>
+            </p>
+
+            <p class="campo campo_check">
+              <label>
+                <input type="checkbox" id="aceptar" name="aceptar" required>
+                Acepto el tratamiento de mis datos personales.
+              </label>
+              <small class="campo_error" id="error_aceptar" role="alert"></small>
+            </p>
+
+            <p class="campo_acciones">
+              <button type="submit" class="boton boton_primario">Enviar mensaje</button>
+              <button type="reset" class="boton boton_secundario">Limpiar</button>
+            </p>
+          </fieldset>
+        </form>
+        <p id="mensaje_confirmacion" class="mensaje_confirmacion" role="status" hidden>
+          ¡Gracias! Formulario validado. Puedes copiar el mensaje y enviarlo mediante tu correo
+        </p>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- pie de pajina -->
+  <footer class="pie">
+    <p>&copy; 2026 Andy Jorge Burgoa Callejas</p>
+  </footer>
+
+  <!-- mensage flotante pequeño -->
+  <output id="notificacion" class="notificacion" role="status"></output>
+
+  <!-- scripts al final con defer -->
+  <script src="js/main.js" defer></script>
+  <script src="js/validacion_formulario.js" defer></script>
+</body>
+
+</html>

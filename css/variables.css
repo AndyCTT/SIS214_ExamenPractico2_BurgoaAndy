@@ -1,0 +1,62 @@
+/* colores, fuentes y espacios en variables */
+:root {
+  --primary-color: #a855f7;
+  --secondary-color: #c084fc;
+  --bg-color: #130f1f;
+  --text-color: #f4f1fb;
+  --font-family-base: 'Inter', system-ui, sans-serif;
+  --spacing-unit: 1rem;
+
+  --bg_primario: var(--bg-color);
+  --bg_secundario: #1c1730;
+  --bg_tarjeta: rgba(43, 30, 71, 0.55);
+  --texto_primario: var(--text-color);
+  --texto_secundario: #b6a9d6;
+  --texto_tenue: #8d7fb0;
+  --acento: var(--primary-color);
+  --acento_hover: var(--secondary-color);
+  --acento_suave: rgba(168, 85, 247, 0.16);
+  --borde: rgba(255, 255, 255, 0.1);
+  --color_error: #ff7b7b;
+
+  --sombra_s: 0 6px 16px rgba(6, 2, 15, 0.35);
+  --sombra_m: 0 18px 40px rgba(6, 2, 15, 0.45);
+  --sombra_l: 0 24px 60px rgba(6, 2, 15, 0.55);
+
+  --radio_s: 10px;
+  --radio_m: 16px;
+  --radio_l: 26px;
+  --radio_completo: 999px;
+
+  --espacio_xs: calc(var(--spacing-unit) * 0.4);
+  --espacio_sm: calc(var(--spacing-unit) * 0.8);
+  --espacio_md: calc(var(--spacing-unit) * 1.4);
+  --espacio_lg: calc(var(--spacing-unit) * 2.2);
+  --espacio_xl: calc(var(--spacing-unit) * 3.5);
+
+  --fuente_titulo: 'Space Grotesk', sans-serif;
+  --fuente_texto: var(--font-family-base);
+
+  --transicion_rapida: 0.18s ease;
+  --transicion: 0.25s ease;
+  --transicion_rebote: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* colores del tema claro */
+html[data-tema="claro"] {
+  --bg_primario: #fbf3df;
+  --bg_secundario: #fffaf0;
+  --bg_tarjeta: rgba(255, 255, 255, 0.8);
+  --texto_primario: #2a1608;
+  --texto_secundario: #7a4a1c;
+  --texto_tenue: #7d5528;
+  --acento: #8a6508;
+  --acento_hover: #c0392b;
+  --acento_suave: rgba(138, 101, 8, 0.14);
+  --borde: rgba(122, 46, 14, 0.18);
+  --color_error: #b3261e;
+
+  --sombra_s: 0 6px 16px rgba(122, 46, 14, 0.08);
+  --sombra_m: 0 18px 40px rgba(122, 46, 14, 0.12);
+  --sombra_l: 0 24px 60px rgba(122, 46, 14, 0.16);
+}
